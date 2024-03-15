@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "945305093592",
+    "project_id": "tripparcel-9bf69",
+    "storage_bucket": "tripparcel-9bf69.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945305093592:android:e6912e9d74770d2414dead",
+        "android_client_info": {
+          "package_name": "com.example.tripparcel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC1N4VrpkJaXYwfKgmgdpWsUZnoZegaRc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
