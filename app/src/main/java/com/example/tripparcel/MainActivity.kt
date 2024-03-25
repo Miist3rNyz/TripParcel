@@ -67,7 +67,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    SignUpScreen()
+                    val navController = rememberNavController()
+                    MyNavigation(navController)
                 }
             }
         }

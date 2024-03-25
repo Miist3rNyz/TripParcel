@@ -39,6 +39,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.tripparcel.R
 import com.example.tripparcel.ui.theme.TripParcelTheme
 import com.example.tripparcel.ui.view.composants.HeaderText
@@ -48,7 +49,7 @@ val defaultPadding = 16.dp
 val itemSpacing = 8.dp
 
 @Composable
-fun LoginScreen(){
+fun LoginScreen(onLoginClick:()-> Unit, onSignUpClick: () -> Unit){
     val (userName, setUsername) = rememberSaveable {
         mutableStateOf("")
     }
@@ -60,6 +61,10 @@ fun LoginScreen(){
     }
     val context = LocalContext.current
     val imageLogo = painterResource(R.drawable.logo)
+    val isFieldsEmpty = userName.isNotEmpty() && password.isNotEmpty()
+
+
+
 //    Affichage du logo
     Column(
         modifier = Modifier
@@ -100,8 +105,7 @@ fun LoginScreen(){
             value = userName,
             onValueChange = setUsername,
             labelText = "Email",
-            leadingIcon = Icons.Default.Person,
-            visualTransformation = PasswordVisualTransformation()
+            leadingIcon = Icons.Default.Person
         )
         Spacer(Modifier.height(itemSpacing))
 //password
@@ -112,7 +116,7 @@ fun LoginScreen(){
             leadingIcon = Icons.Default.Lock,
             modifier = Modifier.fillMaxWidth(),
             keyboardType = KeyboardType.Password,
-            visualTransformation = PasswordVisualTransformation(),
+            isPassword = true
         )
         Spacer(Modifier.height(itemSpacing))
         Row(
@@ -133,7 +137,8 @@ fun LoginScreen(){
         Spacer(Modifier.height(itemSpacing))
 //Boutton
         Button(
-            onClick = {},
+            onClick = onLoginClick,
+            enabled = isFieldsEmpty,
             modifier = Modifier.fillMaxWidth()
                 .padding(
                     top = 30.dp
@@ -162,7 +167,7 @@ fun LoginScreen(){
                     }
                 }
             },
-            onSignUpClick = {},
+            onSignUpClick = onSignUpClick,
             modifier = Modifier
                 .fillMaxSize()
                 .wrapContentSize(align = Alignment.BottomCenter)
@@ -227,7 +232,7 @@ fun AlternativeLoginOptions(
 @Composable
 fun PrevLoginScreen(){
     TripParcelTheme {
-        LoginScreen()
+        LoginScreen({}, {})
     }
 }
 

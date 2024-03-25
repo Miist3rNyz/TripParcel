@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
@@ -20,7 +21,7 @@ fun LoginTextField(
     labelText: String,
     leadingIcon: ImageVector? = null,
     keyboardType: KeyboardType = KeyboardType.Text,
-    visualTransformation: PasswordVisualTransformation,
+    isPassword: Boolean = false
 ){
     OutlinedTextField(
         value = value,
@@ -32,7 +33,7 @@ fun LoginTextField(
                 Icon(imageVector = leadingIcon, null)
         },
         keyboardOptions = KeyboardOptions(keyboardType = keyboardType),
-        visualTransformation = PasswordVisualTransformation(),
+        visualTransformation = if (isPassword) PasswordVisualTransformation() else VisualTransformation.None,
         shape = RoundedCornerShape(0)
     )
 }
@@ -45,6 +46,6 @@ fun PrevTextField(){
         value = "",
         onValueChange = {},
         labelText = "Password",
-        visualTransformation = PasswordVisualTransformation()
+
     )
 }
