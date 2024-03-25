@@ -33,7 +33,7 @@ fun LoginTextField(
         },
         keyboardOptions = KeyboardOptions(keyboardType = keyboardType),
         visualTransformation = PasswordVisualTransformation(),
-        shape = RoundedCornerShape(30)
+        shape = RoundedCornerShape(0)
     )
 }
 
