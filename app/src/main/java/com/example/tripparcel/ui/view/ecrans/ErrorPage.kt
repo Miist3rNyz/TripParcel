@@ -36,8 +36,6 @@ fun ErrorPage() {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
-
-
             Image(
                 painter = painterResource(id = R.drawable.error),
                 contentDescription = null,

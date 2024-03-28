@@ -51,7 +51,6 @@ fun EmptyPage(  onClick: () -> Unit,) {
                     )
 
                 Spacer(modifier = Modifier.height(20.dp))
-                //.........................Text: title
                 Text(
                     text = "No Result",
                     textAlign = TextAlign.Center,
@@ -64,8 +63,6 @@ fun EmptyPage(  onClick: () -> Unit,) {
                     color = MaterialTheme.colorScheme.primary,
                 )
                 Spacer(modifier = Modifier.height(8.dp))
-
-                //.........................Text : description
                 Text(
                     text = "Sorry, there are no results\n. Please try another phrase",
                     textAlign = TextAlign.Center,
