@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">TripParcel</string>
     <string name="logo_content_description">Logo</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
 </resources>

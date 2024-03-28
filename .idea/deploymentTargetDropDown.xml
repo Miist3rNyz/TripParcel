@@ -2,10 +2,16 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="DividerPreview">
+        <State />
+      </entry>
       <entry key="PrevLoginScreen">
         <State />
       </entry>
-      <entry key="PrevTextField">
+      <entry key="SplashScreenActivity">
+        <State />
+      </entry>
+      <entry key="TripCard2">
         <State />
       </entry>
       <entry key="app">

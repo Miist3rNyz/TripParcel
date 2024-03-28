@@ -1,4 +1,4 @@
-package com.example.tripparcel.ui.view.ecrans
+package com.example.tripparcel.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -23,7 +23,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.tripparcel.MainActivity
 import com.example.tripparcel.R
 import kotlinx.coroutines.delay
 
@@ -44,7 +43,7 @@ class SplashScreenActivity : ComponentActivity() {
         }
         LaunchedEffect(key1 = true) {
             alpha.animateTo(1f, animationSpec = tween(1500))
-            delay(3000)
+            delay(1500)
             val intent = Intent(this@SplashScreenActivity, MainActivity::class.java)
             intent.putExtra("key", true)
             startActivity(intent)
